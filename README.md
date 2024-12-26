@@ -52,7 +52,7 @@ Simply put, my work includes **everything relevant to gameplay logic**:
 
 - All C# scripts, except those under `Assets/Plugin`
 - All characters' animation controllers
-- World building
+- Level design
 - AI navigation
 - AI sensor
 - Behavior graphs
