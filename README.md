@@ -2,23 +2,23 @@
 
 ## Ray Tracer
 
-![Ray Tracer Screenshot](./assets/Ray Tracer Screenshot.png)
+![Ray Tracer Screenshot](./assets/RayTracerScreenshot.png)
 
 - Year: **2024**
 - **Personal Project**
 - Repository: [**https://github.com/ydd0729/ray-tracer**](https://github.com/ydd0729/ray-tracer)
 - Online demo: [**https://ydd0729.github.io/ray-tracer**](https://ydd0729.github.io/ray-tracer)
 
-Ray Tracer is a graphics program rendering a classic Cornell box with the latest tech stack. Implemented with Rust and [wgpu](https://github.com/gfx-rs/wgpu), this program can run both locally and in a browser.
+Ray Tracer is a graphics program that renders a classic Cornell box with the latest tech stack. Implemented with Rust and [wgpu](https://github.com/gfx-rs/wgpu), this program can run both locally and in a browser.
 
 **NOTE:** 
 
-- If you want to try out the online demo, please use a web browser that supports WebGPU. All recent modern web browsers should work fine. The latest Chrome on Android devices should also work, but I haven't tested it. 
+- If you want to try out the online demo, please use a web browser that supports WebGPU. Most recent modern web browsers should work fine. The latest Chrome on Android devices should also work, but I haven't tested it. 
 - You can enter fly-through mode in the same way as you do in Unity Editor or Unreal Engine Editor.
 
 ### Overview
 
-This project is a Rust implementation of Peter Shirley's [*Ray Tracing in One Weekend Book Series*](https://github.com/RayTracing/raytracing.github.io?tab=readme-ov-file#ray-tracing-in-one-weekend-book-series). Although you may find many attempts to reimplement the book's code in other languages on GitHub, the features listed below make my work unique, at least for now:
+This project is a Rust implementation of Peter Shirley's [*Ray Tracing in One Weekend Book Series*](https://github.com/RayTracing/raytracing.github.io?tab=readme-ov-file#ray-tracing-in-one-weekend-book-series). While there are many other attempts to reimplement the book's code in other languages on GitHub, the features listed below make my work unique, at least for now:
 
 - This project makes use of wgpu. Ray calculations are carried out in a compute shader along with  techniques like importance sampling, making it fairly fast to converge to a nice-looking view.
 - I implemented all the advanced techniques introduced in the third book, *Ray Tracing: The Rest of Your Life*, and Bounding Volume Hierarchy Tree discussed in the second book in WGSL.
@@ -31,7 +31,7 @@ This project is a Rust implementation of Peter Shirley's [*Ray Tracing in One We
 
 ## ARPG Alpha
 
-![ARPG Screenshot](./assets\ARPG Screenshot.png)
+![ARPG Screenshot](./assets/ARPGScreenshot.png)
 
 - Year: **2024**
 - Repository: [**https://github.com/ydd0729/ArpgAlpha**](https://github.com/ydd0729/ArpgAlpha)
@@ -41,8 +41,8 @@ ARPG Alpha is a ARPG demo game made with Unity.
 
 **NOTE:** 
 
-- The online demo needs a few minutes to download its content.
-- The online demo looks different from the screenshot above, because I didn't realize the shaders were not supported by WebGL until a very late stage. So I replaced the shader with Unity's standard shader, and reworked the terrains. My work **doesn't** include these shaders.
+- The online demo may take a few minutes to download its content.
+- The online demo looks different from the screenshot above, because I didn't realize that the shaders were not supported by WebGL until a very late stage. So I replaced the shader with Unity's standard shader, and reworked the terrains. My work **doesn't** include these shaders.
 
 ### My Work
 
@@ -81,10 +81,10 @@ Footstep sounds have extra mechanics to achieve environment perception. A sphere
 
 I migrated my knowledge and experience working with Unreal Engine's [Gameplay Ability System](https://dev.epicgames.com/documentation/en-us/unreal-engine/gameplay-ability-system-for-unreal-engine) to the development of this game. Instead of reimplementing the entire system, I referenced some high-level concepts to create my own ability system:
 
-- `GameplayAttribute`: a float value representing a gameplay attribute, such as health.
-- `GameplayEffect`: an effect to be applied to manipulate `GameplayAttribute`s
-- `GameplayAbility`: an ability to be granted and activated to perform any actions. 
-- `GameplayAbilitySystem`: the top-level component to do things listed above and interact with other `GameplayAbilitySystem`.
+- **GameplayAttribute**: a float value representing a gameplay attribute, such as health.
+- **GameplayEffect**: an effect to be applied to manipulate `GameplayAttribute`s
+- **GameplayAbility**: an ability to be granted and activated to perform any actions. 
+- **GameplayAbilitySystem**: the top-level component to do things listed above and interact with other `GameplayAbilitySystem`.
 
 I also integrated Unity's `ScriptableObject`  into this ability system, which significantly improves flexibility and usability. For example, every normal attack skill in this game is an instance of  `ComboAttackAbility`.
 
@@ -110,4 +110,4 @@ The visual sensor detects a fan shaped volume, any target overlapped with this v
 
 ![image-20241225172409083](./assets/image-20241225172409083.png)
 
-Unity Behavior is Unity's latest visual tool for authoring behaviors used to control non-player character or objects. The screenshot above is part of Flame Demon's behavior graph describing its behavior when it finds a target.
+Unity Behavior is Unity's latest visual tool for authoring behaviors used to control non-player character or objects. The screenshot above is part of Flame Demon's behavior graph, which describes its actions when it finds a target.
