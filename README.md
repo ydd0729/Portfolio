@@ -41,8 +41,8 @@ ARPG Alpha is a ARPG demo game made with Unity.
 
 **NOTE:** 
 
-- The online demo may take a few minutes to download its content.
-- The online demo looks different from the screenshot above, because I didn't realize that the shaders were not supported by WebGL until a very late stage. So I replaced the shader with Unity's standard shader, and reworked the terrains. My work **doesn't** include these shaders.
+- The online demo also requires WebGPU support and may take a few minutes to download its content.
+- I removed the grass in the online demo because of a bug of Unity 6.1 which is still in the Alpha stage. My work **doesn't** include the grass.
 
 ### My Work
 
